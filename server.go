@@ -28,7 +28,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Fprintf(w, "String rappresentation of Json: %s!", string(jsonMarsh))
+	fmt.Fprintf(w, "%s", string(jsonMarsh))
 }
 
 func main() {
