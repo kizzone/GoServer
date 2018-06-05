@@ -23,17 +23,12 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	i := rand.Intn(100) + 1
 
-	//nel 10 percento dei casi
+	//in some cases
 	if i <= 35 && i >= 0 {
-		fmt.Println("Genero una nuova accelerazione per la leva perchè il valore di è ")
-		fmt.Println(i)
-		//genero una nuova accelerazione
-		currentlevelPs.XCord = rand.Intn(100)
-		fmt.Println("L'accelerazione generata è ")
-		fmt.Println(currentlevelPs.XCord)
-	}
 
-	//2 random uno che decide se aggiornare la posizione e uno aggiorna
+		currentlevelPs.XCord = rand.Intn(100)
+
+	}
 
 	switch r.Method {
 
@@ -52,8 +47,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	default:
 		fmt.Fprintf(w, "Sorry only POST and GET method allow")
 	}
-
-	//creating an array of levelPosition
 
 }
 
